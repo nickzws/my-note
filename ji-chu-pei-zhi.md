@@ -23,9 +23,7 @@ NETMASK=255.255.255.0
 
 192.168.141.129
 
-
-
-###  2、开机后
+### 2、开机后
 
 ```php
 service network restart
@@ -35,7 +33,7 @@ ifconfig //192.168.141.129
 
 ### 3、连接ssh
 
-###  4、连接xftp
+### 4、连接xftp
 
 ```php
 192.168.141.129   
@@ -43,7 +41,7 @@ sftp
 22
 ```
 
-###  5、安装PHP
+### 5、安装PHP
 
 ```
 [root@zws softpackage]# pwd
@@ -94,9 +92,7 @@ Copyright (c) 1997-2018 The PHP Group
 Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologie
 ```
 
-
-
-###  转移php.ini文件
+### 转移php.ini文件
 
 ```php
 [root@zws bin]# cd /home/work/study/softpackage/php-7.2.6
@@ -108,7 +104,7 @@ Configuration File (php.ini) Path => /home/work/study/soft/php/lib
 [root@zws php]# mv ./etc/php.ini ./lib/
 ```
 
-###  6、安装swoole
+### 6、安装swoole
 
 ```php
 [root@zws study]# yum  -y install git
@@ -123,7 +119,7 @@ drwxr-xr-x. 13 root root 4096 7月  25 09:48 swoole
 [root@zws swoole]# /home/work/study/soft/php/bin/phpize
 ```
 
-#### configure时候会报错
+#### 6-1、configure时候会报错
 
 ```php
 [root@zws bin]# find / -name php-config
@@ -137,12 +133,10 @@ error: C++ preprocessor "/lib/cpp" fails sanity check 问题的解决
 
   yum install glibc-headers
 
-  yum install gcc-c++ 
+  yum install gcc-c++
 ```
 
-
-
-#### phpize是用来扩展php模块的，通过phpize可以建立php的外挂模块,解决没有configure问题
+#### 6-2、phpize是用来扩展php模块的，通过phpize可以建立php的外挂模块,解决没有configure问题
 
 ```php
 [root@zws swoole]# ./configure  --with-php-config=/home/work/study/soft/php/bin/php-config
@@ -176,10 +170,8 @@ $   yum install pcre pcre-devel
 
 $   yum install zlib zlib-devel  
 
-$   yum install openssl openssl--devel  
+$   yum install openssl openssl--devel
 ```
-
-
 
 ```php
 [root@zws soft]# tar -zxf nginx-1.8.0.tar.gz
@@ -204,7 +196,7 @@ http://192.168.141.129/
 [root@zws conf]# ../sbin/nginx -s reload
 ```
 
-###  8、设置共享文件夹
+### 8、设置共享文件夹
 
 ```php
 [root@zws ~]# cd /mnt/hgfs/myShare/swoole
@@ -215,7 +207,6 @@ nginx: [error] open() "/usr/local/nginx/logs/nginx.pid" failed (2: No such file 
 [root@zws conf]#  service iptables stop //重启之后的操作
 
 http://192.168.141.129:8811/?m=1&n=2
-
 ```
 
 
