@@ -1,4 +1,4 @@
-#  1、下载Centos
+# 1、下载Centos
 
 [http://mirrors.163.com/centos/7/isos/x86\_64/ CentOS-7-x86\_64-Minimal-1804.iso](http://mirrors.163.com/centos/7/isos/x86_64/ CentOS-7-x86_64-Minimal-1804.iso)
 
@@ -6,11 +6,11 @@
 
 命令不存在
 
-##  1-2、ip addr
+## 1-2、ip addr
 
 !\[image\]\(C:/Users/care/Pictures/1/1.png\)
 
-##  1-3、配置网络
+## 1-3、配置网络
 
 ```
 [imooc@lcoalhost ~]# vi /etc/sysconf/network-scripts/ifcfg-ens33
@@ -52,14 +52,14 @@
 
 **   地址：**[**http://mirrors.163.com/.help/centos.html**](http://mirrors.163.com/.help/centos.html)
 
-###  2-1-1、替换默认源
+### 2-1-1、替换默认源
 
 1. wget  （下载默认没有安装）
 2. yum install wget
-3. http://mirrors.163.com/.help/centos.html  （忽略）
+3. [http://mirrors.163.com/.help/centos.html](http://mirrors.163.com/.help/centos.html)  （忽略）
 4. mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
 5. \[root@localhost ~\]\# cd /etc/yum.repos.d/
-6. \[root@localhost yum.repos.d\]\# wget http://mirrors.163.com/.help/CentOS7-Base-163.repo
+6. \[root@localhost yum.repos.d\]\# wget [http://mirrors.163.com/.help/CentOS7-Base-163.repo](http://mirrors.163.com/.help/CentOS7-Base-163.repo)
 7. 运行以下命令生成缓存  
 
 ```
@@ -70,18 +70,14 @@
 
 !\[image\]\(C:/Users/care/Pictures/1/3.png\)
 
-##  2-1-2. 安装vim
+## 2-1-2. 安装vim
 
-1.  \[root@localhost yum.repos.d\]\# yum install vim
-2.  安装成功后的验证  
+1. \[root@localhost yum.repos.d\]\# yum install vim
+2. 安装成功后的验证
 
-    \[root@localhost yum.repos.d\]\# vim /etc/sysconfig/network-scripts/ifcfg-enp0s3   
+   \[root@localhost yum.repos.d\]\# vim /etc/sysconfig/network-scripts/ifcfg-enp0s3
 
    可以打开即为正常
 
-
-
-
-
-
+![](/assets/import.png)
 
